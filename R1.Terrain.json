@@ -64,7 +64,7 @@
         }
       },
       "DEA9B458-719F-4C0A-B8A1-28C4E065E924": {
-        "isAvail": "false",
+        "isAvail": "true",
         "isEnabled": "true",
         "isHidden": "true",
         "name": "Cesium",
