@@ -1,0 +1,93 @@
+{
+  "sysAppData": {
+    "editions": {
+      "sessionInitConfig": "R1.Init.Session",
+      "hasSplashScreen": "false",
+      "canSwitchEdition": "true",
+      "activationConfig": {
+        "title": "Plex-Earth Pro for Virto",
+        "header": "Plex-Earth Pro for Virto",
+        "icon": "[$URL_GLOBAL_CDN]/assets/app/logo.png",
+        "canTrial": "true",
+        "trialRef": "68300EB41BB8464CA263701D42D8EB2A",
+        "trialHeader": "Staging Environment",
+        "trialText": "This is a staging environment for development and testing purposes only. To proceed as a developer, click the button below.",
+        "trialButtonText": "Activate as Developer >",
+        "trialButtonIcon": "[$URL_GLOBAL_CDN]/assets/app/icons/outline_rocket_launch_white_48dp.png",
+        "trialLearnMoreText": "",
+        "canActivateCode": "true",
+        "activateCodeText": "If you need to activate a subscription, enter the activation code below.",
+        "messageTrialSuccessfullyStartedTitle": "Development Activation Complete",
+        "messageTrialSuccessfullyStartedText": "Your development environment has been successfully activated!<LineBreak/><LineBreak/>Start exploring all the features of Plex-Earth Pro and experience the power of premium tools and data for your designs.",
+        "messageTrialSuccessfullyStartedButtonText": "Finish",
+        "messageCodeSuccessfullyActivatedTitle": "Plex-Earth Pro for Virto Activated",
+        "messageCodeSuccessfullyActivatedText": "Your computer has been activated successfully!<LineBreak/><LineBreak/>You now have access to all the features of Plex-Earth Pro. Enjoy designing with premium tools and data.",
+        "messageCodeSuccessfullyActivatedButtonText": "Finish",
+        "messageUnhandledErrorText": "Please contact our Support Team at <Hyperlink NavigateUri='[$EMAIL_SUPPORT]'>support@plexscape.com</Hyperlink>",
+        "onGotoServicePlans": "https://virto.solar/vs-cad-plugin/"
+      }
+    },
+    "cui": {
+      "isAvailable": "true",
+      "mainRbnTabId": "ID_TAB_PXEARTH",
+      "ribbonTabs": {
+        "ID_TAB_PXEARTH": {
+          "name": "Plex-Earth Pro for Virto",
+          "panels": {
+            "PXID_PANEL_SESSION": {
+              "isVisible": "true",
+              "isEnabled": "true"
+            },
+            "PXID_PANEL_CONTEXTUAL_DATA": {
+              "isVisible": "false",
+              "isEnabled": "false"
+            },
+            "PXID_PANEL_RASTER_TOOLS": {
+              "isVisible": "false",
+              "isEnabled": "false"
+            },
+            "PXID_PANEL_GE": {
+              "isVisible": "false",
+              "isEnabled": "false"
+            },
+            "PXID_PANEL_SERVICE_NOSESS": {
+              "isVisible": "false",
+              "isEnabled": "true"
+            }
+          }
+        }
+      }
+    }
+  },
+  "sysVars": {},
+  "sysStrings": {},
+  "sysConstants": {
+    "[$URL_GLOBAL_CDN]": "https://pe26-v-app-cdn.plexearth360.com",
+    "[$URL_ROOT_CDN]": "[$.]/cdn",
+    "[$URL_ROOT_GOTO]": "https://goto.plexearth.com",
+    "[$URL_PAGE_GOTO_PLUGIN]": "[$URL_ROOT_GOTO]/[$PROD_REF]/plugin",
+    "[$URL_PAGE_HELP]": "[$URL_PAGE_GOTO_PLUGIN]/help",
+    "[$URL_PAGE_WHATSNEW]": "[$URL_PAGE_GOTO_PLUGIN]/whatsnew",
+    "[$URL_PAGE_ADDCREDITS]": "[$URL_PAGE_GOTO_PLUGIN]/addcredits",
+    "[$URL_PAGE_DOWNLOAD]": "[$URL_PAGE_GOTO_PLUGIN]/download",
+    "[$URL_PAGE_WELCOME_LEARNMORE]": "[$URL_PAGE_GOTO_PLUGIN]/welcome",
+    "[$URL_PAGE_PRICING]": "[$URL_PAGE_GOTO_PLUGIN]/pricing",
+    "[$URL_PAGE_UPGRADE]": "[$URL_PAGE_GOTO_PLUGIN]/upgrade",
+    "[$URL_PAGE_CONTACT_SALES]": "[$URL_PAGE_GOTO_PLUGIN]/sales",
+    "[$URL_PAGE_CONTACT_SUPPORT]": "[$URL_PAGE_GOTO_PLUGIN]/support",
+    "[$URL_PRODUCT]": "[$URL_PAGE_GOTO_PLUGIN]/website",
+    "[$EMAIL_SUPPORT]": "mailto:support@plexscape.com",
+    "[$PROD_NAME]": "Plex-Earth Pro for Virto",
+    "[$PROD_VAR]": "X-VIRTO-PRO",
+    "[$PROD_REF]": "pe26-x-virto-pro"
+  },
+  "sysConditionSets": {},
+  "sysSelections": {},
+  "sysCommands": {},
+  "sysCommandLimitSets": {},
+  "sysNamedActions": {},
+  "sysNamedFuncs": {},
+  "sysCampaigns": {},
+  "sysNotifs": {},
+  "sysRefs": {}
+}

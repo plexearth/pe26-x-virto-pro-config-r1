@@ -1,0 +1,487 @@
+{
+  "sysAppData": {
+    "defaultProvIds": [
+      "[$CORE_DEFAULT_IMAGERY_PROVIDER]"
+    ],
+    "dynamicProvId": "[$CORE_DEFAULT_IMAGERY_PROVIDER]",
+    "quickGeoProvId": "[$CORE_DEFAULT_IMAGERY_PROVIDER]",
+    "nearmapVerticalId": "6E4C1F7C-9CFD-4A94-87A0-93A5E93C3F5F",
+    "maxTilesPerMosaic": "500",
+    "defaultZoom": "19",
+    "minZoom": "15",
+    "maxZoom": "22",
+    "customMapIconUrl": "[$URL_GLOBAL_CDN]/assets/providers/custom/icon.png",
+    "legacyDummyName": "INSTALL THE LATEST PLEX-EARTH - This drawing contains elements from a newer version",
+    "legacyDummyIconUrl": "[$URL_GLOBAL_CDN]/assets/app/logo.png",
+    "resources": {
+      "onNewMosaic": [
+        "Global.Mosaics"
+      ],
+      "onTileCapture": [
+        "Global.Images",
+        "Global.Images.Impressions",
+        "Global.Mosaics.Tiles"
+      ],
+      "onNewTimeline": [
+        "Global.Timelines"
+      ],
+      "onNewTimelineView": [
+        "Global.Images",
+        "Global.Images.Impressions",
+        "Global.Timelines.Views"
+      ],
+      "onNewQuickView": [
+        "Global.QuickViews"
+      ],
+      "onNewTransitoryView": [
+        "Global.Images",
+        "Global.Images.Impressions",
+        "Global.Images.Views"
+      ],
+      "onFetchRestore": [
+        "Global.Images.Impressions"
+      ]
+    },
+    "providers": {
+      "PE5_CUSTOM_MAPS": {
+        "isAvail": "true",
+        "isEnabled": "[var:[IS_GOOD_MAP_EXPLORER]] ?? true",
+        "desc": "Custom",
+        "minZoom": "15",
+        "maxZoom": "21",
+        "dispOrder": "0",
+        "isBasemap": "true",
+        "isTimeviews": "false",
+        "isPremium": "false",
+        "isAerial": "false",
+        "isSatellite": "false",
+        "isAutoSuggested": "false",
+        "useCloud": "false",
+        "creditsPerImage": "0",
+        "permissions": {
+          "canDynamicView": "false",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "true",
+          "canSave": "false",
+          "canConvertToRaster": "true",
+          "canPrint": "true"
+        },
+        "poi": {
+          "isAllowed": "true",
+          "minZoom": "18",
+          "maxZoom": "20"
+        },
+        "resources": {
+          "onNewMosaic": [
+            "Providers.CustomMaps.Mosaics"
+          ],
+          "onTileCapture": [
+            "Providers.CustomMaps.Images"
+          ]
+        },
+        "msgNotEnabled": "ON_MAPEXPLORER_NOT_INSTALLED"
+      },
+      "BingMapsImagery": {
+        "isAvail": "false",
+        "isEnabled": "[var:[IS_GOOD_MAP_EXPLORER]] ?? true",
+        "name": "Bing Maps",
+        "desc": "<TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛰 Satellite</TextBlock> | Global Coverage",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/bingmaps/icon.png",
+        "copyright": "Imagery ©[$year] Microsoft",
+        "minZoom": "15",
+        "maxZoom": "20",
+        "dispOrder": "0",
+        "isBasemap": "true",
+        "isTimeviews": "false",
+        "isPremium": "false",
+        "isAerial": "true",
+        "isSatellite": "true",
+        "isAutoSuggested": "false",
+        "tileOverlap": "0.001,0.05",
+        "useCloud": "false",
+        "creditsPerImage": "0",
+        "permissions": {
+          "canDynamicView": "false",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "true",
+          "canSave": "false",
+          "canConvertToRaster": "true",
+          "canPrint": "true"
+        },
+        "resources": {
+          "onNewMosaic": [
+            "Providers.BingMaps.Mosaics"
+          ],
+          "onTileCapture": [
+            "Providers.BingMaps.Images"
+          ]
+        },
+        "msgNotEnabled": "ON_MAPEXPLORER_NOT_INSTALLED"
+      },
+      "1B3FB1EC-80AA-428F-A04F-9308E566FD35": {
+        "isAvail": "[$CORE_SWITCH_GOOGLE_MAPS] ?? true",
+        "isEnabled": "true",
+        "name": "Google Maps",
+        "desc": "<TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛩 Aerial</TextBlock> <TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛰 Satellite</TextBlock> | Global Coverage",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/googlemaps/icon.png",
+        "copyright": "Image ©[$year] Google Maps",
+        "minZoom": "15",
+        "maxZoom": "[var:[VARTAG_GOOGLE_MAPS_ZOOM_MAX]]",
+        "dispOrder": "100",
+        "hasDatasets": "true",
+        "isBasemap": "true",
+        "isTimeviews": "false",
+        "isPremium": "false",
+        "isAerial": "true",
+        "isSatellite": "true",
+        "isAutoSuggested": "false",
+        "hasGlobalCoverage": "true",
+        "dsId": "GOO_HYBRID",
+        "dsName": "Google Maps - Hybrid",
+        "tileOverlap": "0.001,0.05",
+        "useCloud": "true",
+        "creditsPerImage": "0",
+        "permissions": {
+          "canDynamicView": "true",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "true",
+          "canSave": "false",
+          "canConvertToRaster": "true",
+          "canPrint": "true"
+        },
+        "poi": {
+          "isAllowed": "true",
+          "maxZoom": "21"
+        },
+        "resources": {
+          "onNewMosaic": [
+            "Providers.GoogleMaps.Mosaics"
+          ],
+          "onTileCapture": [
+            "Providers.GoogleMaps.Images"
+          ],
+          "onNewTransitoryView": [
+            "Providers.GoogleMaps.Images",
+            "Providers.GoogleMaps.Views"
+          ]
+        },
+        "datasets": {
+          "GOO_SAT": {
+            "name": "Satellite",
+            "desc": "Displays Google Earth satellite images.",
+            "icon": "[$URL_GLOBAL_CDN]/assets/providers/googlemaps/icon-satellite.png",
+            "dispOrder": "10"
+          },
+          "GOO_HYBRID": {
+            "name": "Hybrid Satellite",
+            "desc": "Displays Google Maps satellite images with places, labels and roads.",
+            "icon": "[$URL_GLOBAL_CDN]/assets/providers/googlemaps/icon-satellite.png",
+            "dispOrder": "8"
+          },
+          "GOO_ROAD": {
+            "name": "Roads",
+            "desc": "Displays the default road map view.",
+            "icon": "[$URL_GLOBAL_CDN]/assets/providers/googlemaps/icon-roads.png",
+            "dispOrder": "5"
+          },
+          "GOO_GROUND": {
+            "name": "Terrain",
+            "desc": "Displays a physical map based on terrain information.",
+            "icon": "[$URL_GLOBAL_CDN]/assets/providers/googlemaps/icon-terrain.png",
+            "dispOrder": "0"
+          }
+        }
+      },
+      "3125DA03-6583-442C-9215-560F30D663CC": {
+        "isAvail": "[$CORE_SWITCH_AIRBUS] ?? true",
+        "isEnabled": "true",
+        "name": "Airbus",
+        "desc": "<TextBlock FontSize='8' Padding='4 2' Background='#FFBF00' Foreground='#101010'>💎 Premium</TextBlock> <TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛰 Satellite</TextBlock> | Global Coverage",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/airbus/icon.png",
+        "copyright": "Imagery ©[$year] CNES / Airbus",
+        "minZoom": "15",
+        "maxZoom": "19",
+        "dispOrder": "800",
+        "hasDatasets": "true",
+        "isBasemap": "false",
+        "isTimeviews": "true",
+        "isPremium": "true",
+        "isAerial": "false",
+        "isSatellite": "true",
+        "isAutoSuggested": "false",
+        "hasGlobalCoverage": "true",
+        "tileOverlap": "0.001,0.05",
+        "useCloud": "true",
+        "creditsPerImage": "[$CORE_CREDITS_PER_IMAGE_AIRBUS]",
+        "permissions": {
+          "canDynamicView": "false",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "false",
+          "canSave": "false",
+          "canConvertToRaster": "false",
+          "canPrint": "[var:[VARTAG_AIRBUS_CAN_PRINT]]"
+        },
+        "poi": {
+          "isAllowed": "true"
+        },
+        "resources": {
+          "onNewMosaic": [
+            "Providers.Airbus.Mosaics"
+          ],
+          "onTileCapture": [
+            "Providers.Airbus.Images",
+            "Global.Images.Premium"
+          ],
+          "onNewTimelineView": [
+            "Providers.Airbus.Images",
+            "Providers.Airbus.Views"
+          ],
+          "onCreditConsumption": [
+            "Providers.Airbus.Credits"
+          ]
+        }
+      },
+      "4B09857B-FE31-4854-91AA-12C9F85EC193": {
+        "isAvail": "[$CORE_SWITCH_MAXAR] ?? true",
+        "isEnabled": "true",
+        "name": "Maxar",
+        "desc": "<TextBlock FontSize='8' Padding='4 2' Background='#FFBF00' Foreground='#101010'>💎 Premium</TextBlock> <TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛰 Satellite</TextBlock> | Global Coverage",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/maxar/icon.png",
+        "copyright": "Image ©[$year] MAXAR Technologies",
+        "minZoom": "15",
+        "maxZoom": "19",
+        "dispOrder": "800",
+        "hasDatasets": "true",
+        "isBasemap": "false",
+        "isTimeviews": "true",
+        "isPremium": "true",
+        "isAerial": "false",
+        "isSatellite": "true",
+        "isAutoSuggested": "false",
+        "hasGlobalCoverage": "true",
+        "useCloud": "true",
+        "creditsPerImage": "[$CORE_CREDITS_PER_IMAGE_MAXAR]",
+        "permissions": {
+          "canDynamicView": "false",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "false",
+          "canSave": "false",
+          "canConvertToRaster": "false",
+          "canPrint": "true"
+        },
+        "poi": {
+          "isAllowed": "true"
+        },
+        "resources": {
+          "onNewMosaic": [
+            "Providers.Maxar.Mosaics"
+          ],
+          "onTileCapture": [
+            "Providers.Maxar.Images",
+            "Global.Images.Premium"
+          ],
+          "onNewTimelineView": [
+            "Providers.Maxar.Images",
+            "Providers.Maxar.Views"
+          ],
+          "onCreditConsumption": [
+            "Providers.Maxar.Credits"
+          ]
+        }
+      },
+      "6E4C1F7C-9CFD-4A94-87A0-93A5E93C3F5F": {
+        "isAvail": "[$CORE_SWITCH_NEARMAP] ?? true",
+        "isEnabled": "[var:[HAS_PREMIUM]]",
+        "name": "Nearmap",
+        "desc": "<TextBlock FontSize='8' Padding='4 2' Background='#FFBF00' Foreground='#101010'>💎 Premium</TextBlock> <TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛩 Aerial</TextBlock> | US - Australia - New Zealand | Urban Areas",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/nearmap/icon.png",
+        "copyright": "Image ©[$year] Nearmap",
+        "defaultZoom": "21",
+        "minZoom": "[var:[VARTAG_NEARMAP_ZOOM_MIN]]",
+        "maxZoom": "[var:[VARTAG_NEARMAP_ZOOM_MAX]]",
+        "dispOrder": "1000",
+        "hasDatasets": "true",
+        "isBasemap": "true",
+        "isTimeviews": "false",
+        "isPremium": "true",
+        "isAerial": "true",
+        "isSatellite": "false",
+        "isAutoSuggested": "true",
+        "hasGlobalCoverage": "false",
+        "tileOverlap": "0.001,0.05",
+        "allowCustomKey": "[var:[VARTAG_NEARMAP_CUSTOM_KEY]]",
+        "useCloud": "true",
+        "creditsPerImage": "[$CORE_CREDITS_PER_IMAGE_NEARMAP]",
+        "permissions": {
+          "canDynamicView": "false",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "false",
+          "canSave": "true",
+          "canConvertToRaster": "true",
+          "canPrint": "true"
+        },
+        "poi": {
+          "isAllowed": "true"
+        },
+        "resources": {
+          "onNewMosaic": [
+            "Providers.Nearmap.Mosaics"
+          ],
+          "onTileCapture": [
+            "Providers.Nearmap.Images",
+            "Global.Images.Premium"
+          ],
+          "onCreditConsumption": [
+            "Providers.Nearmap.Credits"
+          ]
+        },
+        "msgNotEnabled": "ON_NEARMAP_NOT_ENABLED"
+      },
+      "C78E7604-3805-43E9-B009-101E157C3BEA": {
+        "isAvail": "[$CORE_SWITCH_HEXAGON] ?? true",
+        "isEnabled": "[var:[HAS_PREMIUM]]",
+        "name": "Hexagon",
+        "desc": "<TextBlock FontSize='8' Padding='4 2' Background='#FFBF00' Foreground='#101010'>💎 Premium</TextBlock> <TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛩 Aerial</TextBlock> | US &amp; Europe | Country/State Wide",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/hexagon/icon.png",
+        "copyright": "Image ©[$year] Hexagon",
+        "minZoom": "19",
+        "maxZoom": "20",
+        "dispOrder": "900",
+        "hasDatasets": "true",
+        "isBasemap": "true",
+        "isTimeviews": "false",
+        "isPremium": "true",
+        "isAerial": "true",
+        "isSatellite": "false",
+        "isAutoSuggested": "true",
+        "hasGlobalCoverage": "false",
+        "dsId": "NA_WAC",
+        "dsName": "North America 30cm resolution",
+        "useCloud": "true",
+        "creditsPerImage": "[$CORE_CREDITS_PER_IMAGE_HEXAGON]",
+        "permissions": {
+          "canDynamicView": "false",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "true",
+          "canSave": "true",
+          "canConvertToRaster": "true",
+          "canPrint": "true"
+        },
+        "poi": {
+          "isAllowed": "true"
+        },
+        "resources": {
+          "onNewMosaic": [
+            "Providers.Hexagon.Mosaics"
+          ],
+          "onTileCapture": [
+            "Providers.Hexagon.Images",
+            "Global.Images.Premium"
+          ],
+          "onCreditConsumption": [
+            "Providers.Hexagon.Credits"
+          ]
+        },
+        "msgNotEnabled": "ON_HEXAGON_NOT_ENABLED"
+      },
+      "977496FF-B5A5-4260-A02D-DE7E4F076E25": {
+        "isAvail": "[$CORE_SWITCH_AZURE_MAPS] ?? true",
+        "isEnabled": "true",
+        "name": "Azure Maps",
+        "desc": "<TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛩 Aerial</TextBlock> <TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛰 Satellite</TextBlock> | Global Coverage",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/azuremaps/icon.png",
+        "copyright": "Imagery ©[$year] Microsoft",
+        "minZoom": "15",
+        "maxZoom": "20",
+        "dispOrder": "0",
+        "hasDatasets": "true",
+        "isBasemap": "true",
+        "isTimeviews": "false",
+        "isPremium": "false",
+        "isAerial": "true",
+        "isSatellite": "true",
+        "isAutoSuggested": "false",
+        "hasGlobalCoverage": "true",
+        "useCloud": "true",
+        "permissions": {
+          "canDynamicView": "true",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "true",
+          "canSave": "true",
+          "canConvertToRaster": "true",
+          "canPrint": "true"
+        },
+        "poi": {
+          "isAllowed": "true",
+          "minZoom": "19",
+          "maxZoom": "20"
+        },
+        "resources": {
+          "onNewMosaic": [
+            "Providers.AzureMaps.Mosaics"
+          ],
+          "onTileCapture": [
+            "Providers.AzureMaps.Images"
+          ],
+          "onNewTransitoryView": [
+            "Providers.AzureMaps.Images",
+            "Providers.AzureMaps.Views"
+          ]
+        }
+      },
+      "1A832FEE-0533-466A-829F-573AFFFEF3A4": {
+        "isAvail": "[$CORE_SWITCH_GOOGLE_MAPS] ?? true",
+        "isEnabled": "true",
+        "name": "Google Maps",
+        "desc": "<TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛩 Aerial</TextBlock> <TextBlock FontSize='8' Padding='4 2' Background='#FFF' Foreground='#101010'>🛰 Satellite</TextBlock> | Global Coverage",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/googlemaps/icon.png",
+        "copyright": "Image ©[$year] Google Maps",
+        "minZoom": "15",
+        "maxZoom": "[var:[VARTAG_GOOGLE_MAPS_ZOOM_MAX]]",
+        "dispOrder": "1000",
+        "hasDatasets": "true",
+        "isBasemap": "false",
+        "isHidden": "true",
+        "isTimeviews": "false",
+        "isPremium": "false",
+        "isAerial": "true",
+        "isSatellite": "true",
+        "isAutoSuggested": "false",
+        "hasGlobalCoverage": "true",
+        "dsId": "GOO_SAT",
+        "dsName": "Google Maps - Satellite",
+        "tileOverlap": "0.001,0.05",
+        "useCloud": "true",
+        "creditsPerImage": "0",
+        "permissions": {
+          "canDynamicView": "false",
+          "canImageryAsMosaic": "true",
+          "canImageryAsRaster": "true",
+          "canSave": "false",
+          "canConvertToRaster": "true",
+          "canPrint": "true"
+        },
+        "datasets": {
+          "GOO_SAT": {
+            "name": "Satellite",
+            "desc": "Displays Google Earth satellite images.",
+            "icon": "[$URL_GLOBAL_CDN]/assets/providers/googlemaps/icon-satellite.png",
+            "dispOrder": "10"
+          }
+        }
+      }
+    }
+  },
+  "sysVars": {},
+  "sysStrings": {},
+  "sysConstants": {},
+  "sysConditionSets": {},
+  "sysSelections": {},
+  "sysCommands": {},
+  "sysCommandLimitSets": {},
+  "sysNamedActions": {},
+  "sysNamedFuncs": {},
+  "sysCampaigns": {},
+  "sysNotifs": {},
+  "sysRefs": {}
+}

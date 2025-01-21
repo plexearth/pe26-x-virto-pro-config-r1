@@ -1,0 +1,54 @@
+{
+  "sysAppData": {
+    "versionConfigs": {
+      "26": {
+        "repoUrl": "https://pe26-x-virto-pro-config-r1.plexearth360.com",
+        "earthDataUrl": "https://plexdeliverynetwork.blob.core.windows.net/public/csList.v014.2024-09-18.json",
+        "file": "R1.VersionCustomizations"
+      }
+    }
+  },
+  "sysVars": {
+    "HAS_PREMIUM": "[tag:[Sub.Permissions.HasPremiumImagery]] ?? false",
+    "HAS_QUICKVIEWS": "true",
+    "HAS_TIMEVIEWS": "true",
+    "HAS_IMAGERY": "true",
+    "HAS_TERRAIN": "true",
+    "HAS_GEOTIFF": "true",
+    "HAS_POI": "true",
+    "HAS_SITE_AREAS": "true",
+    "HAS_GOOGLE_EARTH_IMAGES": "true",
+    "HAS_GOOGLE_EARTH_TOOLS": "true",
+    "HAS_KML": "true",
+    "HAS_PHOTOS": "true",
+    "HAS_RASTER": "true",
+    "HAS_RASTER_ADVANCED": "true",
+    "HAS_CUI": "[tag:[Virto.Sub.HasCui]] ?? false",
+    "CAN_EDIT": "true",
+    "CAN_PRINT": "true",
+    "CAN_PRINT_TIMELINE": "false",
+    "CAN_CUSTOM_MAPS": "true",
+    "CAN_QUICKVIEW_TO_RASTER": "true",
+    "CAN_CREATE_IMAGERY_MOSAIC": "true",
+    "CAN_CREATE_IMAGERY_RASTER": "true",
+    "CAN_CREATE_IMAGERY_TIMELINE": "true",
+    "CAN_INSERT_SURFACE_OBJECTS": "true",
+    "CAN_POLYGONAL_AREAS": "true",
+    "VARTAG_AIRBUS_CAN_PRINT": "[tag:[Sub.Permissions.Airbus.CanPrint]] ?? false",
+    "VARTAG_NEARMAP_ZOOM_MAX": "[tag:[Sub.Settings.Nearmap.MaxZoom]] ?? 21",
+    "VARTAG_NEARMAP_ZOOM_MIN": "[tag:[Sub.Settings.Nearmap.MinZoom]] ?? 21",
+    "VARTAG_NEARMAP_CUSTOM_KEY": "[tag:[Sub.Permissions.HasNearmapAPI]] ?? false",
+    "VARTAG_GOOGLE_MAPS_ZOOM_MAX": "[tag:[Sub.Settings.GoogleMaps.MaxZoom]] ?? 21"
+  },
+  "sysStrings": {},
+  "sysConstants": {},
+  "sysConditionSets": {},
+  "sysSelections": {},
+  "sysCommands": {},
+  "sysCommandLimitSets": {},
+  "sysNamedActions": {},
+  "sysNamedFuncs": {},
+  "sysCampaigns": {},
+  "sysNotifs": {},
+  "sysRefs": {}
+}

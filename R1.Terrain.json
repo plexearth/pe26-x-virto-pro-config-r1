@@ -1,0 +1,171 @@
+{
+  "sysAppData": {
+    "defaultProvIds": [
+      "[$CORE_DEFAULT_TERRAIN_PROVIDER]"
+    ],
+    "legacyDummyName": "INSTALL THE LATEST PLEX-EARTH - This drawing contains elements from a newer version",
+    "legacyDummyIconUrl": "[$URL_GLOBAL_CDN]/assets/app/logo.png",
+    "resources": {
+      "totalTerrains": "Global.Terrains",
+      "onNewTerrainFromProvider": [
+        "Global.Terrains",
+        "Global.Terrains.FromProvider"
+      ],
+      "onNewTerrainFromUserData": [
+        "Global.Terrains",
+        "Global.Terrains.FromUserData"
+      ],
+      "OnNewTerrainFromGeoTiff": [
+        "Global.Terrains",
+        "Global.Terrains.FromGeoTiff"
+      ],
+      "onNewVolume": [
+        "Global.Volumes"
+      ],
+      "onTerrainRestore": [
+        "Global.Terrains.Impressions"
+      ]
+    },
+    "providers": {
+      "5610CB2F-9CA4-4659-8618-8AB7FA4A7C27": {
+        "isAvail": "true",
+        "isEnabled": "true",
+        "name": "Google Elevation",
+        "desc": "Global elevation data",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/googleearth/icon.png",
+        "copyright": "Terrain ©[$year] Google",
+        "defaultZoom": "14",
+        "minZoom": "10",
+        "maxZoom": "16",
+        "canCustomQual": "true",
+        "canEditOptions": "true",
+        "dispOrder": "100",
+        "hasDatasets": "false",
+        "useCloud": "false",
+        "assocImageryProviderIds": [
+          "1B3FB1EC-80AA-428F-A04F-9308E566FD35"
+        ],
+        "permissions": {
+          "canPrint": "true",
+          "canAnalysis": "true",
+          "canInsert": "true",
+          "canDrape": "true",
+          "canProfile": "true"
+        },
+        "pointsSpecs": {
+          "maxPointsPerTerrain": "2000",
+          "defaultPointsPerTerrain": "10000"
+        },
+        "resources": {
+          "totalTerrains": "Providers.GoogleElevations.Terrains",
+          "onNewTerrainFromProvider": [
+            "Providers.GoogleElevations.Terrains"
+          ]
+        }
+      },
+      "DEA9B458-719F-4C0A-B8A1-28C4E065E924": {
+        "isAvail": "false",
+        "isEnabled": "true",
+        "isHidden": "true",
+        "name": "Cesium",
+        "desc": "High resolution terrain worldwide. Ultra high in US, GB, AU and NZ",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/cesium/icon.png",
+        "copyright": "Terrain ©[$year] Cesium",
+        "defaultZoom": "14",
+        "minZoom": "10",
+        "maxZoom": "16",
+        "canCustomQual": "true",
+        "dispOrder": "100",
+        "hasDatasets": "true",
+        "dsId": "11",
+        "useCloud": "true",
+        "permissions": {
+          "canPrint": "true",
+          "canAnalysis": "true",
+          "canInsert": "true",
+          "canDrape": "true",
+          "canProfile": "true"
+        },
+        "tileSpecs": {
+          "tileSize": "256",
+          "tilingScheme": "GEOGRAPHIC",
+          "maxTilesPerMosaic": "160",
+          "maxTilesToAsk": "80",
+          "tileDataType": "QUANTIZED",
+          "tilingInvertY": "true",
+          "numXTilesZoom0": "2",
+          "numYTilesZoom0": "1"
+        },
+        "resources": {
+          "totalTerrains": "Providers.Cesium.Terrains",
+          "onNewTerrainFromProvider": [
+            "Providers.Cesium.Terrains"
+          ]
+        }
+      },
+      "MapzenTerrain": {
+        "isAvail": "false",
+        "isEnabled": "true",
+        "isHidden": "true",
+        "name": "Terrain Tiles on AWS",
+        "desc": "A global dataset providing bare-earth tiled terrain heights, and provided by Amazon S3.",
+        "icon": "[$URL_GLOBAL_CDN]/assets/providers/aws/icon.png",
+        "copyright": "Terrain ©[$year] from https://registry.opendata.aws/terrain-tiles",
+        "defaultZoom": "12",
+        "minZoom": "10",
+        "maxZoom": "13",
+        "canCustomQual": "true",
+        "dispOrder": "100",
+        "hasDatasets": "true",
+        "dsId": "12",
+        "useCloud": "true",
+        "permissions": {
+          "canPrint": "true",
+          "canAnalysis": "true",
+          "canInsert": "true",
+          "canDrape": "true",
+          "canProfile": "true"
+        },
+        "tileSpecs": {
+          "tileSize": "256",
+          "tilingScheme": "WEBMERCATOR",
+          "maxTilesPerMosaic": "100",
+          "maxTilesToAsk": "30",
+          "tileDataType": "HEIGHT",
+          "tilingInvertY": "false",
+          "numXTilesZoom0": "1",
+          "numYTilesZoom0": "1"
+        },
+        "resources": {
+          "totalTerrains": "Providers.Mapzen.Terrains",
+          "onNewTerrainFromProvider": [
+            "Providers.Mapzen.Terrains"
+          ]
+        }
+      }
+    },
+    "simpleTerrain": {
+      "isAvail": "true",
+      "isEnabled": "true",
+      "permissions": {
+        "canPrint": "true",
+        "canAnalysis": "true",
+        "canInsert": "true",
+        "canDrape": "true",
+        "canProfile": "true"
+      }
+    }
+  },
+  "sysVars": {},
+  "sysStrings": {},
+  "sysConstants": {},
+  "sysConditionSets": {},
+  "sysSelections": {},
+  "sysCommands": {},
+  "sysCommandLimitSets": {},
+  "sysNamedActions": {},
+  "sysNamedFuncs": {},
+  "sysCampaigns": {},
+  "sysNotifs": {},
+  "sysRefs": {}
+}

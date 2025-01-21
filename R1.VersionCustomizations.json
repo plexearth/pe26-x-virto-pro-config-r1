@@ -1,0 +1,320 @@
+{
+  "sysAppData": {
+    "prodName": "[$PROD_NAME] ?? Plex-Earth",
+    "prodVariation": "[$PROD_VAR]",
+    "contentServiceUrl": "premium-content-feed-best",
+    "isDebugMode": "[tag:[Sta.Settings.DebugMode]]",
+    "bingKey": "yR5yyLHJ2v9sQMLDROIp~X92TwNaTqJdw1G2f-ALgyg~Avp6GzcvmkgAlpQKPS_S9efEqcpDyv5jlHnSn0KFEeLPOwHW8QIgO1rx-UVQ447_",
+    "kmlDescr": "Created with <a href='[$URL_PRODUCT]'>[$PROD_NAME]</a>",
+    "consumables": {
+      "credits": {
+        "resKey": "Consumables.Credits"
+      },
+      "images": {
+        "resKey": "Consumables.Images"
+      }
+    },
+    "dataKeys": {
+      "tagHost": "Data.Host",
+      "tagPlatform": "Data.Platform",
+      "tagProduct": "Data.Product",
+      "tagInstaller": "Data.Installer",
+      "tagCulture": "Data.Culture",
+      "tagScreen": "Data.Screen",
+      "tagDefaultGeo": "Sta.Settings.DefaultGeo",
+      "tagDefaultUnits": "Sta.Settings.DefaultUnits",
+      "resSessions": "Global.Sessions",
+      "resErrors": "Global.Errors",
+      "metadata": {
+        "Consumables.Credits": {
+          "name": "Credits",
+          "title": "Credits",
+          "textFormat": "{remaining}<LineBreak/><Span FontSize='10'>Remaining</Span>",
+          "showInMyAccount": "true",
+          "isCredits": "true"
+        },
+        "Consumables.Images": {
+          "name": "Images",
+          "title": "Images",
+          "textFormat": "{used}<LineBreak/><Span FontSize='10'>Remaining {remaining}</Span>",
+          "showInMyAccount": "false",
+          "isCredits": "true"
+        }
+      }
+    },
+    "features": {
+      "hasPremium": "[var:[HAS_PREMIUM]]",
+      "hasTimeviews": "[var:[HAS_TIMEVIEWS]]",
+      "hasQuickViews": "[var:[HAS_QUICKVIEWS]]",
+      "hasImagery": "[var:[HAS_IMAGERY]]",
+      "hasRaster": "[var:[HAS_RASTER]]",
+      "hasTerrain": "[var:[HAS_TERRAIN]]",
+      "hasGeoTIFF": "[var:[HAS_GEOTIFF]]",
+      "hasPOI": "[var:[HAS_POI]]",
+      "hasSiteAreas": "[var:[HAS_SITE_AREAS]]",
+      "hasGoogleEarth": "[var:[HAS_GOOGLE_EARTH_TOOLS]]",
+      "hasKML": "[var:[HAS_KML]]",
+      "hasPhotos": "[var:[HAS_PHOTOS]]",
+      "canEdit": "[var:[CAN_EDIT]]",
+      "canPrint": "[var:[CAN_PRINT]]",
+      "canPrintTimeline": "[var:[CAN_PRINT_TIMELINE]]",
+      "canCustomMaps": "[var:[CAN_CUSTOM_MAPS]]",
+      "canPolygonalArea": "[var:[CAN_POLYGONAL_AREAS]]",
+      "canQuickViewToRaster": "[var:[CAN_QUICKVIEW_TO_RASTER]]",
+      "canCreateImageryMosaic": "[var:[CAN_CREATE_IMAGERY_MOSAIC]]",
+      "canCreateImageryRaster": "[var:[CAN_CREATE_IMAGERY_RASTER]]",
+      "canCreateImageryTimeline": "[var:[CAN_CREATE_IMAGERY_TIMELINE]]",
+      "canInsertSurfaceObjects": "[var:[CAN_INSERT_SURFACE_OBJECTS]]",
+      "hasCui": "[var:[HAS_CUI]]"
+    },
+    "events": {
+      "onSignIn": "onSignIn",
+      "onHelp": "onHelp",
+      "onAddCredits": "onAddCredits",
+      "onServicePlans": "onServicePlans"
+    },
+    "cui": {
+      "mainRbnTabId": "ID_TAB_PXEARTH",
+      "ribbonTabs": {
+        "ID_TAB_PXEARTH": {
+          "name": "[$PROD_NAME] ?? Plex-Earth",
+          "panels": {
+            "PXID_PANEL_PROJECT": {
+              "isVisible": "true",
+              "isEnabled": "true"
+            },
+            "PXID_PANEL_CONTEXTUAL_DATA": {
+              "isVisible": "true",
+              "isEnabled": "true"
+            },
+            "PXID_PANEL_GE": {
+              "isVisible": "true",
+              "isEnabled": "true"
+            },
+            "PXID_PANEL_RASTER_TOOLS": {
+              "isVisible": "true",
+              "isEnabled": "true"
+            },
+            "PXID_PANEL_SERVICE": {
+              "isVisible": "true",
+              "isEnabled": "true"
+            }
+          }
+        }
+      }
+    },
+    "configImagery": "R1.Imagery",
+    "configPoi": "R1.Pois",
+    "configTerrain": "R1.Terrain",
+    "configWelcome": "R1.WelcomeTab"
+  },
+  "sysVars": {
+    "IS_TRIAL": "[$isTrial]",
+    "IS_GOOD_MAP_EXPLORER": "[condition:[IS_GOOD_MAP_EXPLORER]]",
+    "IS_SESSION_REM2": "[condition:[IS_SESSION_REM2]]",
+    "IS_SESSION_REM3": "[condition:[IS_SESSION_REM3]]",
+    "DAYS_TO_EXPIRE": "[func:[getDaysToExpire]]",
+    "NOW_UTC": "[$now]"
+  },
+  "sysStrings": {
+    "URL_PAGE_KB_GEIMAGES": "[$URL_PAGE_GOTO_PLUGIN]/kb/geimages"
+  },
+  "sysConstants": {},
+  "sysConditionSets": {
+    "IS_GOOD_MAP_EXPLORER": {
+      "conditions": [
+        {
+          "type": "version",
+          "operator": ">",
+          "value": "[$mapxVersion]",
+          "compareTo": "2.1"
+        }
+      ]
+    },
+    "IS_SESSION_REM2": {
+      "conditions": [
+        {
+          "type": "int",
+          "operator": "==",
+          "value": "[func:[getSessionsRem2]]",
+          "compareTo": "0"
+        }
+      ]
+    },
+    "IS_SESSION_REM3": {
+      "conditions": [
+        {
+          "type": "int",
+          "operator": "==",
+          "value": "[func:[getSessionsRem3]]",
+          "compareTo": "0"
+        }
+      ]
+    }
+  },
+  "sysSelections": {},
+  "sysCommands": {
+    "QuickViews.New": {
+      "isAllowed": "[var:[HAS_QUICKVIEWS]]"
+    },
+    "Imagery.New": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.AddAsMosaic": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.AddAsSingle": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.AddAsTimeline": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.New.Mosaic": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.New.Single": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.New.Timeline": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.AddTiles": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Imagery.Tools": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Timeviews.AddView": {
+      "isAllowed": "[var:[HAS_IMAGERY]]"
+    },
+    "Terrain.New": {
+      "isAllowed": "[var:[HAS_TERRAIN]]"
+    },
+    "Terrain.New.FromGeoTIFF": {
+      "isAllowed": "[var:[HAS_GEOTIFF]]"
+    },
+    "Terrain.Drape": {
+      "isAllowed": "[var:[HAS_TERRAIN]]"
+    },
+    "Terrain.Tools": {
+      "isAllowed": "[var:[HAS_TERRAIN]]"
+    },
+    "Terrain.Derivatives": {
+      "isAllowed": "[var:[HAS_TERRAIN]]"
+    },
+    "Kml.Export": {
+      "isAllowed": "[var:[HAS_KML]]"
+    },
+    "Kml.Import": {
+      "isAllowed": "[var:[HAS_KML]]"
+    },
+    "POI.New": {
+      "isAllowed": "[var:[HAS_POI]]"
+    },
+    "SiteAreas.New": {
+      "isAllowed": "[var:[HAS_SITE_AREAS]]"
+    },
+    "GoogleEarth.Images": {
+      "isAllowed": "[var:[HAS_GOOGLE_EARTH_IMAGES]]"
+    },
+    "GoogleEarth.Tools": {
+      "isAllowed": "[var:[HAS_GOOGLE_EARTH_TOOLS]]"
+    },
+    "Photos.Import": {
+      "isAllowed": "[var:[HAS_PHOTOS]]"
+    },
+    "Raster.Advanced": {
+      "isAllowed": "[var:[HAS_RASTER_ADVANCED]]"
+    },
+    "Raster.Tools": {
+      "isAllowed": "[var:[HAS_RASTER]]"
+    }
+  },
+  "sysCommandLimitSets": {
+    "Consumables.Credits": {
+      "isEnabled": "true",
+      "limits": [
+        {
+          "isEnabled": "true",
+          "key": "Consumables.Credits",
+          "onReached": {
+            "type": "gotoNotif",
+            "notifId": "ON_CONSUMABLES_CREDITS_LIMIT_REACHED"
+          },
+          "onExceeding": {
+            "type": "gotoNotif",
+            "notifId": "ON_CONSUMABLES_CREDITS_LIMIT_REACHED"
+          }
+        }
+      ]
+    },
+    "Consumables.Images": {
+      "isEnabled": "true",
+      "limits": [
+        {
+          "isEnabled": "true",
+          "key": "Consumables.Images",
+          "onReached": {
+            "type": "gotoNotif",
+            "notifId": "ON_CONSUMABLES_IMAGES_LIMIT_REACHED"
+          },
+          "onExceeding": {
+            "type": "gotoNotif",
+            "notifId": "ON_CONSUMABLES_IMAGES_LIMIT_REACHED"
+          }
+        }
+      ]
+    }
+  },
+  "sysNamedActions": {
+    "onHelp": {
+      "type": "gotoUrl",
+      "url": "[$URL_PAGE_HELP]?utm_source=[$HOST_PLATFORM_REF]-[$PROD_REF]&utm_medium=ribbon&utm_term=pxv_help&"
+    },
+    "onServicePlans": {
+      "type": "gotoUrl",
+      "url": "[$URL_PAGE_PRICING]?utm_source=[$HOST_PLATFORM_REF]-[$PROD_REF]&wky=[$wky]"
+    }
+  },
+  "sysNamedFuncs": {
+    "random100": {
+      "type": "rnd.int",
+      "min": "0",
+      "max": "100"
+    },
+    "randomGuid": {
+      "type": "rnd.guid"
+    },
+    "getNowUtc": {
+      "type": "datetime.now",
+      "isUtc": "true",
+      "fmt": "yyyy-MM-ddTHH:mm:ss.fff"
+    },
+    "getTodayUtc": {
+      "type": "datetime.now",
+      "isUtc": "true",
+      "fmt": "yyyy-MM-dd"
+    },
+    "getDaysToExpire": {
+      "type": "datetime.span",
+      "end": "[$expirationDate]",
+      "start": "[func:[getTodayUtc]]",
+      "fmt": "%d"
+    },
+    "getSessionsRem2": {
+      "type": "num.op",
+      "oper": "%",
+      "num1": "[$sessions]",
+      "num2": "2"
+    },
+    "getSessionsRem3": {
+      "type": "num.op",
+      "oper": "%",
+      "num1": "[$sessions]",
+      "num2": "3"
+    }
+  },
+  "sysCampaigns": {},
+  "sysNotifs": {},
+  "sysRefs": {}
+}

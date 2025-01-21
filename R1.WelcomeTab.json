@@ -1,0 +1,67 @@
+{
+  "sysAppData": {
+    "panelHeader": {
+      "isVisible": "true",
+      "imageUrl": "[$URL_ROOT_CDN]/images/logo_RGB_256dp.png",
+      "title": "Welcome to [$PROD_NAME]",
+      "text": "Informed Solar PV Design"
+    },
+    "panelWhatsNew": {
+      "isVisible": "true",
+      "activeId": "the_first_ever",
+      "items": {
+        "the_first_ever": {
+          "title": "What's new in [$PROD_NAME]!",
+          "text": "Click here to learn how you get the best out of our software.",
+          "icon": "[$URL_ROOT_CDN]/campaigns/002-whatsnew/outline_tips_and_updates_black_48dp.png",
+          "clickUrl": "[$URL_PAGE_WHATSNEW]?utm_source=[$HOST_PLATFORM_REF]-[$PROD_REF]",
+          "onClick": "whatsNewActions_CountClicks",
+          "onShow": "whatsNewActions_CountImpressions"
+        }
+      }
+    },
+    "panelCommands": {
+      "isVisible": "true",
+      "showExploreSection": "true",
+      "textExplore": "Explore:",
+      "hasQuickViews": "true",
+      "showContextualDataSection": "true",
+      "textContextualData": "Contextual Data:",
+      "hasImagery": "true",
+      "hasTerrain": "true",
+      "hasGeoTIFF": "false",
+      "showVisualization": "false",
+      "textVisualization": "Visualization and Collaboration:",
+      "hasKml": "false"
+    }
+  },
+  "sysVars": {},
+  "sysStrings": {},
+  "sysConstants": {},
+  "sysConditionSets": {},
+  "sysSelections": {},
+  "sysCommands": {},
+  "sysCommandLimitSets": {},
+  "sysNamedActions": {
+    "whatsNewActions_CountClicks": {
+      "type": "basic",
+      "setData": {
+        "resources": {
+          "UX.Client.WhatsNew.Clicks": "1"
+        }
+      }
+    },
+    "whatsNewActions_CountImpressions": {
+      "type": "basic",
+      "setData": {
+        "resources": {
+          "UX.Client.WhatsNew.Impressions": "1"
+        }
+      }
+    }
+  },
+  "sysNamedFuncs": {},
+  "sysCampaigns": {},
+  "sysNotifs": {},
+  "sysRefs": {}
+}
