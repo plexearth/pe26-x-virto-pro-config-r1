@@ -2,7 +2,7 @@
   "sysAppData": {
     "prodName": "[$PROD_NAME] ?? Plex-Earth",
     "prodVariation": "[$PROD_VAR]",
-    "contentServiceUrl": "premium-content-feed-best",
+    "contentServiceUrl": "premium-content-feed-stg",
     "isDebugMode": "[tag:[Sta.Settings.DebugMode]]",
     "bingKey": "yR5yyLHJ2v9sQMLDROIp~X92TwNaTqJdw1G2f-ALgyg~Avp6GzcvmkgAlpQKPS_S9efEqcpDyv5jlHnSn0KFEeLPOwHW8QIgO1rx-UVQ447_",
     "kmlDescr": "Created with <a href='[$URL_PRODUCT]'>[$PROD_NAME]</a>",
